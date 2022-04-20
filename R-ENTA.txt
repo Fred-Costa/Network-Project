@@ -73,12 +73,12 @@ router eigrp 100
  passive-interface GigabitEthernet0/1
 
 
-router ospf 200
+router eigrp 200
  no auto-summary
  redistribute static
- network 10.0.4.0 0.0.0.255 area 0 
- network 10.1.4.0 0.0.0.255 area 0
- network 10.2.4.0 0.0.0.255 area 0
+ network 10.0.4.0 0.0.0.255  
+ network 10.1.4.0 0.0.0.255 
+ network 10.2.4.0 0.0.0.255 
  network 192.168.4.4 0.0.0.3
  passive-interface GigabitEthernet0/0
  passive-interface GigabitEthernet0/1
