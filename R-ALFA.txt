@@ -2,6 +2,13 @@
 * Router ALFA *
 ****************
 
+---------IP's excluídos pelo DHCP-----------
+
+ip dhcp excluded-address 172.16.4.1
+ip dhcp excluded-address 172.16.4.253
+ip dhcp excluded-address 172.18.4.253
+ip dhcp excluded-address 172.18.4.1
+
 ---------Roteamento EIGRP para ENTA-----------
 
 router eigrp 100
