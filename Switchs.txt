@@ -4,13 +4,27 @@
 
 ------- Switch 7 --------
 
+# Criar Vlans e dar-lhes um nome
+
+vlan 10
+name vendas
+exit
+
+vlan 20
+name marketing
+exit
+
+vlan 30
+name rh
+exit
+
 # Prioridades com spanning-tree
 
 spanning-tree vlan 10 priority 24576
 spanning-tree vlan 20 priority 28672
 
 
-# Interface Port-channel
+# Interface Port-channel para a comunicação entre dois switches
 
 interface Port-channel1
  switchport mode trunk
@@ -40,6 +54,20 @@ interface FastEthernet0/15
 
 ------- Switch 9 --------
 
+# Criar Vlans e dar-lhes um nome
+
+vlan 10
+name vendas
+exit
+
+vlan 20
+name marketing
+exit
+
+vlan 30
+name rh
+exit
+
 
 # Prioridades com Spanning-Tree
 
@@ -47,7 +75,7 @@ spanning-tree vlan 20 priority 28672
 spanning-tree vlan 30 priority 24576
 
 
-# Interface Port-channel
+# Interface Port-channel para a comunicação entre dois switches
 
 interface Port-channel1
  switchport mode trunk
@@ -71,13 +99,26 @@ interface FastEthernet0/13
 
 ------- Switch 11 --------
 
+# Criar Vlans e dar-lhes um nome
+
+vlan 10
+name vendas
+exit
+
+vlan 20
+name marketing
+exit
+
+vlan 30
+name rh
+exit
 
 # Prioridades com Spanning-Tree
 
 spanning-tree vlan 30 priority 28672
 
 
-# Interface Port-channel
+# Interface Port-channel para a comunicação entre dois switches
 
 interface Port-channel2
  switchport mode trunk
@@ -114,7 +155,21 @@ interface FastEthernet0/13
 
 ------- Switch 14 --------
 
-# Interface Port-Channel
+# Criar Vlans e dar-lhes um nome
+
+vlan 10
+name vendas
+exit
+
+vlan 20
+name marketing
+exit
+
+vlan 30
+name rh
+exit
+
+# Interface Port-Channel para a comunicação entre dois switches
 
 interface Port-channel2
  switchport mode trunk
