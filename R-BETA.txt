@@ -24,7 +24,7 @@ access-list 1 permit 192.168.0.0 0.0.255.255
 
 access-list 100 permit tcp any any eq www
 access-list 100 permit tcp any any eq 443
-access-list 100 permit ip any 1.4.0.0 0.0.0.3
+access-list 100 permit ip any 2.4.0.0 0.0.0.3
 
 
 # NAT na porta S0/1/1 e NAT para uma maquina especifica apenas para as portas http / https 
