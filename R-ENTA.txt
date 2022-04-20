@@ -206,4 +206,4 @@ interface Serial0/0/1
  ip virtual-reassembly in
  crypto map MAPA
 
-access-list 100 permit gre host 2.2.0.1 host 2.2.0.2
+access-list 100 permit gre host 2.4.0.1 host 2.4.0.2
