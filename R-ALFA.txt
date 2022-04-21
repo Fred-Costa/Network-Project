@@ -9,6 +9,15 @@ ip dhcp excluded-address 172.16.4.253
 ip dhcp excluded-address 172.18.4.253
 ip dhcp excluded-address 172.18.4.1
 
+---------DHCP para o telefone do ASA-----------
+
+ip dhcp pool inside
+network 172.18.4.0 255.255.255.0
+default-router 172.18.4.253
+option 150 ip 172.18.4.1
+dns-server 8.8.8.8
+exit
+
 ---------Roteamento EIGRP para ENTA-----------
 
 router eigrp 100
