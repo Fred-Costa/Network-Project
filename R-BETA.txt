@@ -63,11 +63,11 @@ crypto isakmp policy 10
 
 crypto isakmp key Passw0rd address 2.4.0.1
 
-crypto ipsec transform-set TRANS2 ah-sha-hmac esp-aes 256 esp-sha-hmac
+crypto ipsec transform-set TRANS ah-sha-hmac esp-aes 256 esp-sha-hmac
 
 crypto map MAPA 10 ipsec-isakmp 
  set peer 2.4.0.1
- set transform-set TRANS2 
+ set transform-set TRANS
  match address 101
 
 interface Tunnel200
