@@ -60,11 +60,10 @@ ip nat outside
 
 
 
----------Roteamento EIGRP para ALFA(100) & OSPF para BETA(200)-----------
+---------Roteamento EIGRP para ALFA(100) & para BETA(200)-----------
 
 router eigrp 100
  no auto-summary
- redistribute static
  network 10.0.4.0 0.0.0.255
  network 10.1.4.0 0.0.0.255
  network 10.2.4.0 0.0.0.255
@@ -75,7 +74,6 @@ router eigrp 100
 
 router eigrp 200
  no auto-summary
- redistribute static
  network 10.0.4.0 0.0.0.255  
  network 10.1.4.0 0.0.0.255 
  network 10.2.4.0 0.0.0.255 
@@ -146,7 +144,8 @@ crypto isakmp policy 10
 
 crypto isakmp key Passw0rd address 1.4.0.2 
 
-crypto ipsec transform-set TRANS ah-sha-hmac esp-aes 256 esp-sha-hmac mode tunnel
+crypto ipsec transform-set TRANS ah-sha-hmac esp-aes 256 esp-sha-hmac 
+mode tunnel
 
 crypto map OMAPA 10 ipsec-isakmp 
  set peer 1.4.0.2
@@ -184,7 +183,8 @@ crypto isakmp policy 10
 crypto isakmp key Passw0rd address 2.4.0.2 
 
 
-crypto ipsec transform-set TRANS2 ah-sha-hmac esp-aes 256 esp-sha-hmac mode tunnel.
+crypto ipsec transform-set TRANS2 ah-sha-hmac esp-aes 256 esp-sha-hmac 
+mode tunnel
 
 
 crypto map MAPA 10 ipsec-isakmp 
