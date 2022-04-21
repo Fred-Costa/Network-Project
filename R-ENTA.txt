@@ -167,7 +167,6 @@ interface Tunnel100
 interface Serial0/0/0
  ip address 1.4.0.1 255.255.255.252
  ip nat outside
- ip virtual-reassembly in
  crypto map OMAPA
 
 access-list 100 permit gre host 1.4.0.1 host 1.4.0.2
@@ -190,7 +189,7 @@ crypto ipsec transform-set TRANS ah-sha-hmac esp-aes 256 esp-sha-hmac
 mode tunnel
 
 
-crypto map MAPA 10 ipsec-isakmp 
+crypto map MAPA2 10 ipsec-isakmp 
  set peer 2.4.0.2
  set transform-set TRANS
  match address 101
@@ -207,6 +206,6 @@ interface Serial0/0/1
  ip address 2.4.0.1 255.255.255.252
  ip nat outside
  ip virtual-reassembly in
- crypto map MAPA
+ crypto map MAPA2
 
 access-list 101 permit gre host 2.4.0.1 host 2.4.0.2
