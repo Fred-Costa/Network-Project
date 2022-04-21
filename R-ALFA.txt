@@ -59,7 +59,6 @@ interface FastEthernet0/0
 no shut
  ip address 172.16.4.1 255.255.255.0
  ip nat inside
- ip virtual-reassembly in
  duplex auto
  speed auto
 
@@ -88,7 +87,6 @@ interface Tunnel100
 interface Serial0/1/1
  ip address 1.4.0.2 255.255.255.252
  ip nat outside
- ip virtual-reassembly in
  clock rate 125000
  crypto map OMAPA
 
