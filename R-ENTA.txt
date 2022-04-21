@@ -17,16 +17,19 @@ ip dhcp excluded-address 10.2.4.1
 ip dhcp pool V10
  network 10.0.4.0 255.255.255.0
  default-router 10.0.4.1 
+ option 150 ip 10.0.4.1
  dns-server 8.8.8.8 
 
 ip dhcp pool V20
  network 10.1.4.0 255.255.255.0
  default-router 10.1.4.1 
+ option 150 ip 10.1.4.1 
  dns-server 8.8.8.8
 
 ip dhcp pool V30
  network 10.2.4.0 255.255.255.0
  default-router 10.2.4.1 
+ option 150 ip 10.2.4.1
  dns-server 8.8.8.8
 
 
@@ -183,13 +186,13 @@ crypto isakmp policy 10
 crypto isakmp key Passw0rd address 2.4.0.2 
 
 
-crypto ipsec transform-set TRANS2 ah-sha-hmac esp-aes 256 esp-sha-hmac 
+crypto ipsec transform-set TRANS ah-sha-hmac esp-aes 256 esp-sha-hmac 
 mode tunnel
 
 
 crypto map MAPA 10 ipsec-isakmp 
  set peer 2.4.0.2
- set transform-set TRANS2
+ set transform-set TRANS
  match address 101
 
 
