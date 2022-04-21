@@ -2,7 +2,7 @@
 * Router BETA *
 ****************
 
----------Roteamento OSPF para ENTA-----------
+---------Roteamento EIGRP para ENTA-----------
 
 router eigrp 200
  network 172.16.4.0 0.0.0.255 
