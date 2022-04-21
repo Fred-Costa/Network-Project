@@ -39,18 +39,8 @@ interface FastEthernet0/0
 no shut
  ip address 172.16.4.3 255.255.255.0
  ip nat inside
- ip virtual-reassembly in
  duplex auto
  speed auto
-
-
-interface Serial0/1/1
-no shut
- ip address 2.4.0.2 255.255.255.252
- ip nat outside
- ip virtual-reassembly in
- crypto map MAPA
-
 
 ---------Tunnel com encryptação do Router BETA para ENTA-----------
 
@@ -65,7 +55,7 @@ crypto isakmp key Passw0rd address 2.4.0.1
 
 crypto ipsec transform-set TRANS ah-sha-hmac esp-aes 256 esp-sha-hmac
 
-crypto map MAPA 10 ipsec-isakmp 
+crypto map MAPA2 10 ipsec-isakmp 
  set peer 2.4.0.1
  set transform-set TRANS
  match address 101
@@ -78,7 +68,6 @@ interface Tunnel200
 interface Serial0/1/1
  ip address 2.4.0.2 255.255.255.252
  ip nat outside
- ip virtual-reassembly in
- crypto map MAPA
+ crypto map MAPA2
 
 access-list 101 permit gre host 2.4.0.2 host 2.4.0.1
